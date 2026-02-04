@@ -102,10 +102,10 @@ document.querySelector(".yes-page3").addEventListener("click", () => {
   setTimeout(() => {
     notiText.textContent = "อ่ะนี้ดอกไม้เราให้ 🥰";
     notiGif.src = "floreyonce-cat.gif";
-  }, 4000);
+  }, 5000);
 
   // ❌ ปิด noti หลังอันสุดท้าย
   setTimeout(() => {
     notification.classList.remove("show");
-  }, 9000);
+  }, 15000);
 });
