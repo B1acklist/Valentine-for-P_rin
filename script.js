@@ -87,15 +87,25 @@ yesBtn.addEventListener("click", () => {
   loveSong.play();
 });
 const notification = document.getElementById("notification");
+const notiText = notification.querySelector(".noti-text");
+const notiGif = notification.querySelector(".noti-gif");
 
 document.querySelector(".yes-page3").addEventListener("click", () => {
   buttonsPage3.style.display = "none";
 
-  // แสดง notification
+  // 🔔 NOTI 1
+  notiText.textContent = "จริงรึป่าว ไหนมาจุ๊บที 💖";
+  notiGif.src = "cat_kiss.gif";
   notification.classList.add("show");
 
-  // หายเองใน 2.5 วิ
+  // 🔔 NOTI 2 (ต่อจากอันแรก)
+  setTimeout(() => {
+    notiText.textContent = "อ่ะนี้ดอกไม้เราให้ 🥰";
+    notiGif.src = "floreyonce-cat.gif";
+  }, 4000);
+
+  // ❌ ปิด noti หลังอันสุดท้าย
   setTimeout(() => {
     notification.classList.remove("show");
-  }, 15000);
+  }, 9000);
 });
